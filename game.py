@@ -1,7 +1,9 @@
-# imports here
+from human import Human
+from ai import AI
+from player import Player
 
-#! Game rules for Rock
-  #todo Rock crushes Scissors 
-  #todo Scissors cuts Paper
-  #todo Spock smashes Scissors 
-  #todo Scissors decapitates Lizard
+
+
+class Game:
+    def __init__(self):
+        pass
