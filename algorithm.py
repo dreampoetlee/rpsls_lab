@@ -20,9 +20,13 @@
   #todo Spock vaporizes Rock
 
 # As a player, I want the option of a single player (human vs AI) or a multiplayer (human vs human) game.
+
   #? types of players: 
     #? 2 humans: need classes ---> human_one & human_two
     #? 1 AI : class name ----> the_machine
+  
+  #? where should the players methods be called?
+    #? main.py file
 
 # As a developer, I want to store all of the gesture options/choices in a list. I want to find a way to utilize the list of gestures within my code (display gesture options, assign player a gesture, etc).
   #& Store gestures & options in a list
