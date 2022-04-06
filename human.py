@@ -1,2 +1,4 @@
-class Player:
-    def __init__(self):
+class Human:
+  def __init__(self):
+      pass
+
