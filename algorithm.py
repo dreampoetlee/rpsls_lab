@@ -1,5 +1,37 @@
 # Current algorithm for how to run and play the game
 
+ #! Classes needed 
+    #todo Parent class
+      #? Player
+        #^ has a: 
+          # -name
+          # -list of possible gestures
+          # -chosen_gesture
+          # -score
+      #& Child classes
+          # computer
+          # human
+        #^ Can do
+          # choose gestures
+    #todo Regular Classes
+      #? Game
+        #^ has a
+          # player_one
+          # player_two
+        #^ Game Phases
+          #! Intro Phase
+            # -welcome message
+            # -display rules
+            # -find out how many players & create player two
+          #! Main game phase
+            # -player_one chooses gesture
+            # -player_two chooses gesture
+            # -compares gestures, find winner
+            # -repeat until somone has 2 pts
+          #! Endgame
+            # -display winner
+
+
 #~ need classes
   #* 1) paper
   #* 2) scissors
@@ -45,15 +77,11 @@
   # 3 Human file-can choose their option to play game
   # 4 Game file-Runs entire game. import AI, import human, import options, import rules. display welcome, random choice options for player.
 
-  #! Classes needed 
-    #todo Parent class
-    #? Player
-      # has a: 
-      # - name
-      # - list of possible gestures
-      # - chosen_gesture
-      # - score
-    #& Child classes
+ 
+
+
+    
+
 
 
     # renamed the following files: lizard to player...paper to AI....rock to human...scissors to game...deleted spock ile
