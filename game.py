@@ -1,5 +1,5 @@
 from human import Human
-from ai import AI
+from computer import Computer
 from player import Player
 
 
