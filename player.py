@@ -1,8 +1,8 @@
 import random
 
 class Player:
-    def __init__(self, name, ):
+    def __init__(self, name):
         self.name = name
-        self.gestures = ["rock", "paper", "scissors", "lizard", "spock"]
+        self.gestures = ["rock", "paper", "scissors", "lizard", "spock"] 
         self.chosen_gesture = random.randrange(len(self.gestures))
-        
+        self.score = 0
