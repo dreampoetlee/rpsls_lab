@@ -6,6 +6,6 @@ class Human(Player):
 
   def choose_gesture(self):
     self.chosen_gesture = input("What gesture would you like to play for this round? ")
-
-      
-
+  
+  def man_vs_machine(self):
+    self.man_wins += 1

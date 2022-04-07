@@ -7,3 +7,6 @@ class Computer(Player):
     
   def choose_gesture(self):
     self.chosen_gesture = random.randrange(len(self.possible_gestures))
+  
+  def machine_vs_man(self):
+    self.machine_wins += 1

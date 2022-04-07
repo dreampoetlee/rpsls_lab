@@ -12,7 +12,7 @@ class Game:
         self.display_welcome_message()
         self.display_rules()
         self.player_type()
-        self.game__play()
+        self.game_play()
         self.display_winner()
 
     def display_welcome_message(self):
@@ -37,3 +37,14 @@ class Game:
             self.player_two = Computer('player_two')
         elif response == '2' :
             self.player_two = Human('player_two')
+    
+    # As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a winner.
+    def game_play(self):
+        while self
+
+
+
+
+
+
+        self.player_one.choose_gesture()
