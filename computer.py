@@ -1,6 +1,9 @@
 from player import Player
+import random
 
 class Computer(Player):
   def __init__(self, name):
-    #! player can choose a gesture, but is it inherited from the parent class or does it have to be placed here
       super().__init__(name)
+    
+  def choose_gesture(self):
+    self.chosen_gesture = random.randrange(len(self.possible_gestures))
