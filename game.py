@@ -16,7 +16,7 @@ class Game:
         self.display_winner()
 
     def display_welcome_message(self):
-        print("Welcome to Rock,Paper,Scissors,Lizard,Spock!!!")
+        print("Welcome to Rock, Paper, Scissors, Lizard, Spock!!!")
 
     def display_rules(self):
         print("Here are the rules for the Game!")
@@ -40,11 +40,17 @@ class Game:
     
     # As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a winner.
     def game_play(self):
-        while self
+        while True:
+            print(f"Player one's chosen gesture is: {self.player_one.chosen_gesture}, and Player two's chosen gesture is: {self.player_two.chosen_gesture} ")
 
 
 
+            #  = input(f'You have chosen to play{self.player_one.chosen_gesture}, the computer has chosen {self.player_two.chosen_gesture} ')
 
+           # self.player_one.choose_gesture()
 
-
-        self.player_one.choose_gesture()
+    def display_winner(self) :
+        if self.player_one.man_wins == 2 :
+            print(f'{self.player_one} wins the game!')
+        elif self.player_two.machine_wins == 2 :
+            print(f'{self.player_two} wins the game!')
