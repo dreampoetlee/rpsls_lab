@@ -44,7 +44,7 @@ class Game:
         elif response == '2' :
             self.player_two = Human('player_two')
     def game_play(self):# As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a winner.
-        while self.player_one.round_won < 2 and self.player_two.round_won < 2 :
+        while self.player_one.round_won() < 2 and self.player_two.round_won() < 2 :
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
         # As a player, I want the correct player to win a given round based on the choices* made by each player.
