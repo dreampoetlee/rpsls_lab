@@ -13,10 +13,12 @@ class Game:
         self.display_rules()
         self.player_type()
         self.game_play()
+        self.compare_chosen_gestures()
         self.display_winner()
+       
 
     def display_welcome_message(self):
-        print("Welcome to Rock, Paper, Scissors, Lizard, Spock!!!")
+        print("Welcome to Rock,Paper,Scissors,Lizard,Spock!!!")
 
     def display_rules(self):
         print("Here are the rules for the Game!")
@@ -37,9 +39,8 @@ class Game:
             self.player_two = Computer('player_two')
         elif response == '2' :
             self.player_two = Human('player_two')
-    
-    # As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a winner.
-    def game_play(self):
+    def game_play(self):# As a player, I want the game of RPSLS to be at minimum a ‘best of three’ to decide a winner.
+     def game_play(self):
         while True:
             print(f"Player one's chosen gesture is: {self.player_one.chosen_gesture}, and Player two's chosen gesture is: {self.player_two.chosen_gesture} ")
 
@@ -49,8 +50,33 @@ class Game:
 
            # self.player_one.choose_gesture()
 
-    def display_winner(self) :
-        if self.player_one.man_wins == 2 :
+# GAME PLAY ABOVE******* Unsure what to write. finished compare and left your code above in game play. ****
+    def compare_chosen_gesture(self):
+       if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
+            print("its a tie")
+       elif self.player_one.chosen_gesture == "Rock" and self.player_two.chosen_gesture == "Scissors" or self.player_two.chosen_gesture == "Lizard":
+            print("Player one wins")
+            self.player_one.machine_wins += 1
+       elif self.player_one.chosen_gesture == "Paper" and self.player_two.chosen_gesture == "Rock" or self.player_two.chosen_gesture == "Spock":
+            print("Player one wins")
+            self.player_one.machine_wins += 1
+       elif self.player_one.chosen_gesture == "Scissors" and self.player_two.chosen_gesture == "Paper" or self.player_two.chosen_gesture == "Lizard":
+            print("Player one wins")
+            self.player_one.machine_wins += 1
+       elif self.player_one.chosen_gesture == "Lizard" and self.player_two.chosen_gesture == "Paper" or self.player_two.chosen_gesture == "Spock":
+            print("Player one wins")
+            self.player_one.machine_wins += 1
+       elif self.player_one.chosen_gesture == "Spock" and self.player_two.chosen_gesture == "Rock" or self.player_two.chosen_gesture == "Scissors":
+            print("Player one wins")
+            self.player_one.machine_wins += 1
+       else:
+            self.player_two.man_wins += 1
+            print("Player two wins")
+            
+
+    def display_winner(self):
+        if(self.player_one ==2):
             print(f'{self.player_one} wins the game!')
-        elif self.player_two.machine_wins == 2 :
+        
+        elif(self.player_two == 2):
             print(f'{self.player_two} wins the game!')
